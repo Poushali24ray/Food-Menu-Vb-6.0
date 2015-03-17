@@ -1,0 +1,140 @@
+Dim subtotal As Single
+Dim total As Single
+Dim total2 As Single
+ Const num1 As Single = 10
+ Const num2 As Single = 5
+ Const num3 As Single = 15
+ 
+
+ 
+ 
+Private Sub Check1_Click()
+
+  If Check1.Value = 1 And Check2.Value = 1 And Check3.Value = 1 Then
+  subtotal = num1 + num2 + num3
+  ElseIf Check1.Value = 1 And Check2.Value = 1 And Check3.Value = 0 Then
+  subtotal = num1 + num2
+  ElseIf Check1.Value = 1 And Check2.Value = 0 And Check3.Value = 1 Then
+  subtotal = num1 + num3
+  ElseIf Check1.Value = 1 And Check2.Value = 0 And Check3.Value = 0 Then
+  subtotal = num1
+  ElseIf Check1.Value = 0 And Check2.Value = 1 And Check3.Value = 1 Then
+  subtotal = num2 + num3
+   ElseIf Check1.Value = 0 And Check2.Value = 1 And Check3.Value = 0 Then
+  subtotal = num2
+  ElseIf Check1.Value = 0 And Check2.Value = 0 And Check3.Value = 1 Then
+  subtotal = num3
+   ElseIf Check1.Value = 0 And Check2.Value = 0 And Check3.Value = 0 Then
+  subtotal = 0
+  End If
+
+   
+  Text1.Text = subtotal
+  
+End Sub
+
+Private Sub Check2_Click()
+
+  If Check1.Value = 1 And Check2.Value = 1 And Check3.Value = 1 Then
+  subtotal = num1 + num2 + num3
+  ElseIf Check1.Value = 1 And Check2.Value = 1 And Check3.Value = 0 Then
+  subtotal = num1 + num2
+  ElseIf Check1.Value = 1 And Check2.Value = 0 And Check3.Value = 1 Then
+  subtotal = num1 + num3
+  ElseIf Check1.Value = 1 And Check2.Value = 0 And Check3.Value = 0 Then
+  subtotal = num1
+  ElseIf Check1.Value = 0 And Check2.Value = 1 And Check3.Value = 1 Then
+  subtotal = num2 + num3
+   ElseIf Check1.Value = 0 And Check2.Value = 1 And Check3.Value = 0 Then
+  subtotal = num2
+  ElseIf Check1.Value = 0 And Check2.Value = 0 And Check3.Value = 1 Then
+  subtotal = num3
+   ElseIf Check1.Value = 0 And Check2.Value = 0 And Check3.Value = 0 Then
+  subtotal = 0
+  End If
+
+   
+  Text1.Text = subtotal
+
+End Sub
+
+Private Sub Check3_Click()
+
+  If Check1.Value = 1 And Check2.Value = 1 And Check3.Value = 1 Then
+  subtotal = num1 + num2 + num3
+  ElseIf Check1.Value = 1 And Check2.Value = 1 And Check3.Value = 0 Then
+  subtotal = num1 + num2
+  ElseIf Check1.Value = 1 And Check2.Value = 0 And Check3.Value = 1 Then
+  subtotal = num1 + num3
+  ElseIf Check1.Value = 1 And Check2.Value = 0 And Check3.Value = 0 Then
+  subtotal = num1
+  ElseIf Check1.Value = 0 And Check2.Value = 1 And Check3.Value = 1 Then
+  subtotal = num2 + num3
+   ElseIf Check1.Value = 0 And Check2.Value = 1 And Check3.Value = 0 Then
+  subtotal = num2
+  ElseIf Check1.Value = 0 And Check2.Value = 0 And Check3.Value = 1 Then
+  subtotal = num3
+   ElseIf Check1.Value = 0 And Check2.Value = 0 And Check3.Value = 0 Then
+  subtotal = 0
+  End If
+   
+  Text1.Text = subtotal
+
+End Sub
+
+Private Sub Command1_Click()
+Text4.Text = total + total2 + subtotal
+End Sub
+
+Private Sub Option1_Click()
+If Option1.Value = True Then
+ total = 100
+ End If
+ Text2.Text = total & " Chicken burger"
+ Option1.Value = True
+
+End Sub
+
+Private Sub Option2_Click()
+If Option2.Value = True Then
+ total = 150
+ End If
+ Text2.Text = total & "  mutton burger"
+End Sub
+
+Private Sub Option3_Click()
+If Option3.Value = True Then
+ total = 80
+ End If
+ Text2.Text = total & " veg burger "
+End Sub
+
+Private Sub Option4_Click()
+If Option4.Value = True Then
+ total2 = 10
+ End If
+ Text3.Text = total2 & " Pepsi "
+End Sub
+
+Private Sub Option5_Click()
+If Option5.Value = True Then
+ total2 = 15
+ End If
+ Text3.Text = total2 & " lime soda"
+End Sub
+
+Private Sub Option6_Click()
+If Option6.Value = True Then
+ total2 = 20
+ End If
+ Text3.Text = total2 & " Cold Coffee "
+End Sub
+
+Private Sub Text1_Change()
+'Text1.Text = Val(subtotal)
+End Sub
+
+Private Sub Text4_Change()
+Text4.Text = subtotal + total + total2
+End Sub
+
